@@ -1,4 +1,4 @@
-@import url("http://fonts.cdnfonts.com/css/jlr-star-shrek");
+@import url("https://fonts.cdnfonts.com/css/jlr-star-shrek");
 
 *,
 *::before,
@@ -110,6 +110,12 @@ body {
   }
 }
 
+@media (max-width: 1279px) {
+  .slider {
+    width: 60%;
+    height: 90%;
+  }
+}
 
 @media (max-width: 1023px) {
   .slider {
@@ -123,12 +129,5 @@ body {
     grid-row: 2;
     justify-content: center;
     align-items: center;
-  }
-}
-
-@media (max-width: 1279px) {
-  .slider {
-    width: 60%;
-    height: 90%;
   }
 }
