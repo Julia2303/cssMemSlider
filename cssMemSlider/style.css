@@ -28,7 +28,7 @@ body {
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 8fr 1fr;
   row-gap: 3%;
-  border: 0.175rem solid #ffffff;
+  border: 0.175rem solid #1db954;
   width: 25%;
   height: 80%;
 }
@@ -52,7 +52,6 @@ body {
 .slider__radioLabels {
   display: flex;
   justify-content: end;
-  gap: 5%;
 }
 
 .slider__image,
@@ -65,27 +64,53 @@ body {
 }
 
 .slider__radioLabel {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.slider__radioLabelCircle {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
   border: 0.175rem solid #1db954;
-  cursor: pointer;
   transition: border-color 0.3s, background-color 0.3s;
 }
 
-.slider__radioLabel:hover {
+.slider__radioLabel:hover > .slider__radioLabelCircle {
   border-color: #ffffff;
 }
 
-.slider__radioLabel:active {
+.slider__radioLabel:active > .slider__radioLabelCircle {
   background-color: #ffffff;
+}
+
+#slide-1:checked
+  ~ .slider__radioLabels
+  > .slider__radioLabel:nth-child(1)
+  > .slider__radioLabelCircle,
+#slide-2:checked
+  ~ .slider__radioLabels
+  > .slider__radioLabel:nth-child(2)
+  > .slider__radioLabelCircle,
+#slide-3:checked
+  ~ .slider__radioLabels
+  > .slider__radioLabel:nth-child(3)
+  > .slider__radioLabelCircle,
+#slide-4:checked
+  ~ .slider__radioLabels
+  > .slider__radioLabel:nth-child(4)
+  > .slider__radioLabelCircle {
+  background-color: #1db954;
 }
 
 #slide-1:checked ~ .slider__radioLabels > .slider__radioLabel:nth-child(1),
 #slide-2:checked ~ .slider__radioLabels > .slider__radioLabel:nth-child(2),
 #slide-3:checked ~ .slider__radioLabels > .slider__radioLabel:nth-child(3),
 #slide-4:checked ~ .slider__radioLabels > .slider__radioLabel:nth-child(4) {
-  background-color: #1db954;
   pointer-events: none;
 }
 
