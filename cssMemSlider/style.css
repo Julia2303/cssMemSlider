@@ -1,5 +1,10 @@
 @import url("https://fonts.cdnfonts.com/css/jlr-star-shrek");
 
+:root {
+  --white: #FFFFFF;
+  --green: #1DB954;
+}
+
 *,
 *::before,
 *::after {
@@ -17,19 +22,20 @@ body {
   width: 100vw;
   font-family: "Open Sans";
   font-size: 1.5rem;
-  color: #ffffff;
+  color: var(--white);
   background-color: #000000;
   font-family: "JLR Star Shrek", sans-serif;
 }
 
 .slider {
-  padding: 0 0.5rem;
+  padding: 0.7rem;
+  padding-bottom: 0;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 8fr 1fr;
   row-gap: 3%;
-  border: 0.175rem solid #1db954;
-  width: 25%;
+  border: 0.175rem solid var(--green);
+  width: 30%;
   height: 80%;
 }
 
@@ -42,6 +48,8 @@ body {
   object-fit: contain;
   width: 100%;
   height: 100%;
+  border-radius: 3%;
+  background-color: var(--white);
   animation: 0.6s anim;
 }
 
@@ -65,7 +73,7 @@ body {
 
 .slider__radioLabel {
   width: 1.5rem;
-  height: 1.5rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,16 +84,16 @@ body {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  border: 0.175rem solid #1db954;
+  border: 0.175rem solid var(--green);
   transition: border-color 0.3s, background-color 0.3s;
 }
 
 .slider__radioLabel:hover > .slider__radioLabelCircle {
-  border-color: #ffffff;
+  border-color: var(--white);
 }
 
 .slider__radioLabel:active > .slider__radioLabelCircle {
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 
 #slide-1:checked
@@ -104,7 +112,7 @@ body {
   ~ .slider__radioLabels
   > .slider__radioLabel:nth-child(4)
   > .slider__radioLabelCircle {
-  background-color: #1db954;
+  background-color: var(--green);
 }
 
 #slide-1:checked ~ .slider__radioLabels > .slider__radioLabel:nth-child(1),
@@ -123,7 +131,7 @@ body {
 #slide-3:checked ~ .slider__texts > .slider__text:nth-child(3),
 #slide-4:checked ~ .slider__texts > .slider__text:nth-child(4) {
   display: block;
-  animation: fadeIn 1s;
+  animation: fadeIn 1.2s;
 }
 
 @keyframes fadeIn {
@@ -137,12 +145,12 @@ body {
 
 @media (max-width: 1279px) {
   .slider {
-    width: 60%;
+    width: 70%;
     height: 90%;
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .slider {
     grid-template-columns: 1fr;
     grid-template-rows: 10fr 1fr 2fr;
@@ -155,4 +163,12 @@ body {
     justify-content: center;
     align-items: center;
   }
+}
+
+@media (max-width: 450px) {
+  
+  body {
+    font-size: 1.3rem;
+  }
+
 }
