@@ -20,8 +20,8 @@ body {
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  font-family: "Open Sans";
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
   color: var(--white);
   background-color: #000000;
   font-family: "JLR Star Shrek", sans-serif;
@@ -72,7 +72,7 @@ body {
 }
 
 .slider__radioLabel {
-  width: 1.5rem;
+  width: 1.6rem;
   height: 2rem;
   display: flex;
   align-items: center;
@@ -81,8 +81,8 @@ body {
 }
 
 .slider__radioLabelCircle {
-  width: 1rem;
-  height: 1rem;
+  width: 1.1rem;
+  height: 1.1rem;
   border-radius: 50%;
   border: 0.175rem solid var(--green);
   transition: border-color 0.3s, background-color 0.3s;
@@ -169,6 +169,7 @@ body {
   
   body {
     font-size: 1.3rem;
+    line-height: 1.5rem;
   }
 
 }
